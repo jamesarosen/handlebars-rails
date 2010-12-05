@@ -30,15 +30,26 @@ In `app/views/blogs/show.html.hbs`:
 
 ### Usage Gotchas ###
 
+#### HTML-Safety ####
+
 Rails returns HTML-safe strings, but the string-safety information
 isn't passed into Handlebars, so Handlebars re-escapes the content.
 To get around this, use the triple-stash (`{{{ ... }}}`) when
 using a Rails helper.
-See [issue 2](https://github.com/jamesarosen/handlebars-rails/issues/#issue/2)
+See [issue 2](https://github.com/jamesarosen/handlebars-rails/issues/#issue/2).
+
+#### Rails Helpers ####
 
 Names of Rails helpers must be quoted. This is because they don't
 exist in the Handlebars context and are looked up in `ActionView`.
-See [issue 3](https://github.com/jamesarosen/handlebars-rails/issues/#issue/3)
+See [issue 3](https://github.com/jamesarosen/handlebars-rails/issues/#issue/3).
+
+Then there's the additional problem of the Rails helpers not existing
+in the client-side JS context. This means that if you use a
+`{{{ rails ... }}}` block, it can only be run server-side. This will
+be fixed in the future.
+See [issue 4](https://github.com/jamesarosen/handlebars-rails/issues/#issue/4)
+and [issue 5](https://github.com/jamesarosen/handlebars-rails/issues/#issue/5).
 
 ## Credits ##
 
