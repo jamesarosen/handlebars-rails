@@ -9,6 +9,10 @@ DRY. That's why.
 
 ## How ##
 
+First, grab the copy of handlebars you are using and copy it into
+`vendor/javascripts/handlebars.js`. If you want, you can symlink
+it from your `public` directory.
+
 In `app/controllers/blogs_controller.rb`:
 
     BlogsController
