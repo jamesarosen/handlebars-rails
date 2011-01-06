@@ -1,6 +1,6 @@
 # my_rails_engine.gemspec
 Gem::Specification.new do |gem|
-  gem.version = '0.0.1'
+  gem.version = '0.1.0'
   gem.name = 'handlebars-rails'
   gem.files = Dir["lib/**/*", "app/**/*", "config/**/*"] + %w(README.md HISTORY.md)
   gem.summary = "Rails Template Handler for Handlebars"
