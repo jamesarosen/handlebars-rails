@@ -7,6 +7,11 @@ both server- and client-side.
 
 DRY. That's why.
 
+## Getting Handlebars ##
+
+The easiest way to get a current distribution of handlebars is to
+download it from https://github.com/wycats/handlebars.js/downloads.
+
 ## How ##
 
 First, grab the copy of handlebars you are using and copy it into
