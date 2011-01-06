@@ -1,4 +1,5 @@
-require 'v8'
+require 'handlebars-rails/version'
+require 'handlebars-rails/v8'
 require "active_support"
 
 module Handlebars

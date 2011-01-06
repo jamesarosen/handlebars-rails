@@ -1,6 +1,10 @@
-# my_rails_engine.gemspec
+lib = File.expand_path('../lib/', __FILE__)
+$:.unshift lib unless $:.include?(lib)
+
+require 'handlebars-rails/version'
+
 Gem::Specification.new do |gem|
-  gem.version = '0.1.0'
+  gem.version = Handlebars::VERSION
   gem.name = 'handlebars-rails'
   gem.files = Dir["lib/**/*", "app/**/*", "config/**/*"] + %w(README.md HISTORY.md)
   gem.summary = "Rails Template Handler for Handlebars"
