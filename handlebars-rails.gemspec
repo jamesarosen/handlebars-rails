@@ -6,8 +6,7 @@ require 'handlebars-rails/version'
 Gem::Specification.new do |gem|
   gem.version               = Handlebars::VERSION
   gem.name                  = 'handlebars-rails'
-  gem.files                 = `git ls-files`.split("\n") + man_files
-  gem.files                 = Dir["lib/**/*", "app/**/*", "config/**/*"] + %w(README.md HISTORY.md)
+  gem.files                 = `git ls-files`.split("\n")
   gem.summary               = "Rails Template Handler for Handlebars"
   gem.description           = "Use Handlebars.js client- and server-side"
   gem.email                 = "james.a.rosen@gmail.com"
