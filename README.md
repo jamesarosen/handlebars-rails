@@ -25,10 +25,14 @@ In `app/views/blogs/show.html.hbs`:
       </header>
       {{{ blog/body }}}
       <footer>
-        by {{{ rails "link_to" blog/author/name blog/author }}}
+        by {{{ link_to blog/author/name blog/author }}}
     </article>
 
 ### Usage Gotchas ###
+
+* Template line numbers may not match stack trace line numbers. This
+  will be resolved upstream.
+* Block helpers do not currently work.
 
 #### HTML-Safety ####
 
@@ -40,14 +44,9 @@ See [issue 2](https://github.com/jamesarosen/handlebars-rails/issues/#issue/2).
 
 #### Rails Helpers ####
 
-Names of Rails helpers must be quoted. This is because they don't
-exist in the Handlebars context and are looked up in `ActionView`.
-See [issue 3](https://github.com/jamesarosen/handlebars-rails/issues/#issue/3).
-
-Then there's the additional problem of the Rails helpers not existing
-in the client-side JS context. This means that if you use a
-`{{{ rails ... }}}` block, it can only be run server-side. This will
-be fixed in the future.
+Rails helpers obviously do not exist in the client-side JS context.
+This means that if you use `{{{ link_to ... }}}`, it can only be run server-side.
+The solution is to implement a minimal `link_to` in the client-side.
 See [issue 4](https://github.com/jamesarosen/handlebars-rails/issues/#issue/4)
 and [issue 5](https://github.com/jamesarosen/handlebars-rails/issues/#issue/5).
 
