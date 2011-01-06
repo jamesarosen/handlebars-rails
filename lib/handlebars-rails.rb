@@ -37,7 +37,7 @@ module Handlebars
       %{
         js = ::Handlebars::TemplateHandler.js
         js['actionview'] = self
-        js.eval("Templates['#{template.identifier}']").call(assigns)
+        js.eval("Templates['#{template.identifier}']").call(assigns).force_encoding(Encoding.default_external)
       }
     end
 
