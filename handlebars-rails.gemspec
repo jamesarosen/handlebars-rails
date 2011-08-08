@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.summary               = "Rails Template Handler for Handlebars"
   gem.description           = "Use Handlebars.js client- and server-side"
   gem.email                 = "james.a.rosen@gmail.com"
-  gem.homepage              = "http://github.com/jamesarosen/arturo"
+  gem.homepage              = "http://github.com/jamesarosen/handlebars-rails"
   gem.authors               = ["James A. Rosen", "Yehuda Katz"]
   gem.test_files            = []
   gem.require_paths         = [".", "lib"]
