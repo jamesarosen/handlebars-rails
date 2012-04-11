@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   current_version           = Gem::Specification::CURRENT_SPECIFICATION_VERSION
   gem.specification_version = 2
   gem.add_runtime_dependency      'rails',        '~> 3.0'
-  gem.add_runtime_dependency      'therubyracer', '~> 0.8.0'
+  gem.add_runtime_dependency      'therubyracer', '~> 0.9.9'
   gem.add_development_dependency  'mocha'
   gem.add_development_dependency  'rake'
   gem.add_development_dependency  'redgreen',     '~> 1.2'
